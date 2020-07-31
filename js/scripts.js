@@ -1,12 +1,24 @@
-function order(type,size,crust,toppings,number,delivery){
-    this.type=type;
-    this.size=size;
-    this.crust=crust;
-    this.toppings=toppings;
-    this.number=number;
-    this.delivery=delivery;
+//business logic
+function order(pizzaType,pizzaSize,pizzCrust,pizzaToppings,pizzaNumber,deliveryCheck){
+    this.pizzaType=pizzaType;
+    this.pizzaSize=pizzaSize;
+    this.pizzaCrust=pizzaCrust;
+    this.pizzaToppings=pizzaToppings;
+    this.pizzaNumber=pizzaNumber;
+    this.deliveryCheck=deliveryCheck;
 }
-var type=["Hawaiian","BBQ Chicken","Chicken Periperi","BBQ Beef"];
-var size=["small","medium","large"];
-var crust=["crispy","stuffed","Gluten Free"];
-var toppings=["cheese","mushroom","beef","chicken"]
+var pizzaType=["Hawaiian","BBQ Chicken","Chicken Periperi","BBQ Beef"];
+var pizzaSize=["small","medium","large"];
+var pizzCrust=["crispy","stuffed","Gluten Free"];
+var pizzaToppings=["cheese","mushroom","beef","chicken"]
+
+//user interface logic
+$(".orders").each(function()  {
+  var inputType=$(this).find("input.pizzaType").val();
+  var inputSize=$(this).find("input.pizzaSize").val();
+  var inputCrust=$(this).find("input.pizzaCrust").val();
+  var inputToppings=$(this).find("input.pizzaToppings").val();
+  var inputNumber=$(this).find("input.pizzaNumber").val();
+  var inputDelivery=$(this).find("input.deliveryCheck").val();
+});
+$(".myOrder").text
