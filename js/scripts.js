@@ -2,29 +2,35 @@
 function order(pizzaType,pizzaSize,pizzCrust,pizzaToppings,pizzaNumber,deliveryCheck){
     this.pizzaType=pizzaType;
     this.pizzaSize=pizzaSize;
-    this.pizzaCrust=pizzCrust;
+    this.pizzaCrust=pizzaCrust;
     this.pizzaToppings=pizzaToppings;
     this.pizzaNumber=pizzaNumber;
     this.deliveryCheck=deliveryCheck;
 }
 
+order.prototype.fullOrder = function() {
+  return this.pizzaType + " " + this.pizzaSize + " " + this.pizzaCrust + " " + this.pizzaToppings + " " + this.pizzaNumber + " " + this.deliveryCheck;
 }
-
 var pizzaType=["Hawaiian","BBQ Chicken","Chicken Periperi","BBQ Beef"];
 var pizzaSize=["small","medium","large"];
 var pizzCrust=["crispy","stuffed","Gluten Free"];
 var pizzaToppings=["cheese","mushroom","beef","chicken"]
 
+const pizzaSizeLarge=1200;
+const pizzaSizeMedium=900;
+const pizzaSizeSmall=650;
+const pizzaToppings=150;
+const deliveryFee=250;
+
 //user interface logic
 
 $(document).ready(function() {
-  $("#orderButton").submit(function(event) {
+  $("form#orderButton").submit(function(event) {
+      console.log(pizzaType);
       event.preventDefault();
 
-      var pizzaType=["Hawaiian","BBQ Chicken","Chicken Periperi","BBQ Beef"];
-      var pizzaSize=["small","medium","large"];
-      var pizzCrust=["crispy","stuffed","Gluten Free"];
-      var pizzaToppings=["cheese","mushroom","beef","chicken"]
+      console.log(fullOrder);
+
 
 
       var inputtedType=$("orders#pizzaType").val();
@@ -35,19 +41,8 @@ $(document).ready(function() {
       var inputtedDelivery=$("orders#deliveryCheck").val();
       var newOrder=new order(inputType, inputType,  inputCrust, inputToppings,  inputNumber,  inputDelivery);
 
-  $("form.orders").each(function()  {
-      var inputtedType=$(this).find("input.pizzaType").val();
-      var inputtedSize=$(this).find("input.pizzaSize").val();
-      var inputtedCrust=$(this).find("input.pizzaCrust").val();
-      var inputtedToppings=$(this).find("input.pizzaToppings").val();
-      var inputtedNumber=$(this).find("input.pizzaNumber").val();
-      var inputtedDelivery=$(this).find("input.deliveryCheck").val();
 
-
-        alert(inputtedType);
-
-
-  $("#myOrder").append(order.customerOrder());
+  $("#myOrder").append(order.fullOrder());
 
   $("input#pizzaType").val("");
   $("input#pizzaSize").val("");
