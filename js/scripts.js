@@ -27,7 +27,7 @@ $(document).ready(function() {
        var deliveryCheck=$("#deliveryCheck").val();
 
       var myOrder=new order(pizzaType, pizzaSize, pizzaCrust, pizzaToppings, pizzaNumber, deliveryCheck);
-  $("#one").append( myOrder.pizzaType + " " + myOrder.pizzaSize + " " + myOrder.pizzaCrust + " " + myOrder.pizzaToppings + " " + "*" + myOrder.pizzaNumber + " " + myOrder.deliveryCheck );
+  $("#one").append( myOrder.pizzaSize + " " + myOrder.pizzaType + " " + "with" +  " "  +myOrder.pizzaCrust + " " +  "crust" + "  "  + "and"+  " " +myOrder.pizzaToppings + " " + "*" + myOrder.pizzaNumber + " " + myOrder.deliveryCheck );
 
 
         if (pizzaSize=="Large" && deliveryCheck==true){
