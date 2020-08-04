@@ -24,11 +24,32 @@ $(document).ready(function() {
       pizzaCrust=$("#pizzaCrust").val();
       pizzaToppings=$("#pizzaToppings").val();
       pizzaNumber=$("#pizzaNumber").val();
-      deliveryCheck=$("#deliveryCheck").val();
+       var deliveryCheck=$("#deliveryCheck").val();
 
       var myOrder=new order(pizzaType, pizzaSize, pizzaCrust, pizzaToppings, pizzaNumber, deliveryCheck);
   $("#myOrder").append(myOrder.pizzaType + " " + myOrder.pizzaSize + " " + myOrder.pizzaCrust + " " + myOrder.pizzaToppings + " " + myOrder.pizzaNumber + " " + myOrder.deliveryCheck);
 
+
+        if (pizzaSize="large" && deliveryCheck==true){
+            var price=(pizzaSizeLarge*pizzaNumber)+delivery;
+          }
+        else if (pizzaSize="large" && deliveryCheck==false){
+          var price=(pizzaSizeLarge*pizzaNumber);
+        }
+        if (pizzaSize="medium" && deliveryCheck==true){
+            var price=(pizzaSizeMedium*pizzaNumber)+delivery;
+          }
+        else if (pizzaSize="Medium" && deliveryCheck==false){
+          var price=(pizzaSizeMedium*pizzaNumber);
+        }
+        if (pizzaSize="small" && deliveryCheck==true){
+            var price=(pizzaSizeSmall*pizzaNumber)+delivery;
+          }
+        else if (pizzaSize="small" && deliveryCheck==false){
+          var price=(pizzaSizeSmall*pizzaNumber);
+        }
+
+        alert(price);
 
 });
 });
