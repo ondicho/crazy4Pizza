@@ -15,7 +15,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="card">
+          <div class="card" id="menu">
             <div class="jumbotron">
             <div class="card-title">Menu</div></div>
             <div class="card-body">
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card">
+          <div class="card" id="prices">
             <div class="jumbotron">
             <div class="card-title">Prices</div></div>
             <div class="card-body">
@@ -35,17 +35,22 @@
               <p>Medium : 900</p>
               <p>Small : 650</p>
               <p>Toppings : 150</p>
+              <br>
               <p>Delivery : 250(<strong><em>Delivery within Nairobi Only</em></strong>)</p>
             </div>
           </div>
         </div>
-
-
-        <div  class="col-md-12"><h2>Order Here</h2></div>
+      </div>
+    </div>
+    <div class="container">
+    <div class="row">
+        <div  class="col-md-12"><div class="jumbotron"><h2 id="header2">Order Here</h2></div></div>
         <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
           <form class="orders" >
             <div class="form-group">
-              <label for="pizzaType">Type :</label>
+              <label for="pizzaType"><strong>Type :</strong></label>
               <select id="pizzaType"  class="form-control">
                 <option selected>Choose pizza Type..</option>
                 <option id="pizzaTypeHawaiian">Hawaiian</option>
@@ -55,7 +60,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="pizzaSize">Size :</label>
+              <label for="pizzaSize"><strong>Size :</strong></label>
               <select id="pizzaSize"  class="form-control">
                 <option selected>Choose pizza size..</option>
                 <option id="pizzaSizeSmall">Small</option>
@@ -64,7 +69,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="pizzaCrust">Crust :</label>
+              <label for="pizzaCrust"><strong>Crust :</strong></label>
               <select id="pizzaCrust"  class="form-control">
                 <option selected>Choose crust..</option>
                 <option id="pizzaCrustCrispy">Crispy</option>
@@ -73,7 +78,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="pizzaToppings">Toppings :</label>
+              <label for="pizzaToppings"><strong>Toppings :</strong></label>
               <select id="pizzaToppings"  class="form-control">
                 <option selected>Choose Toppings..</option>
                 <option id="pizzaToppingsCheese">Cheese</option>
@@ -83,28 +88,27 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="pizzaNumber">Number</label>
+              <label for="pizzaNumber"><strong>Number</strong></label>
               <input  type="text" id="pizzaNumber" class="form-control">
             </div>
             <div class="form-check">
               <input name="delivery" type="checkbox" value="" id="deliveryCheck">
               <label class="checkbox" for="deliveryCheck">
-                Delivery
+                <strong>Delivery</strong>
               </label>
             </div>
             <button type="button" id="orderButton"  class="btn btn-primary" >Order</button>
           </form>
+        </div></div>
         </div>
-        <div class="col-md-6" id="myOrder">
-          <div class="jumbotron"><h2>Your Order</h2></div>
-          <p  id="one"></p>
-          <p  id="two"></p>
-          <p  id="three"></p>
-          <p  id="four"></p>
-          <p  id="five"></p>
-          <p  id="six"></p>
+        <div class="col-md-6">
+          <div class="card"><div class="card-title">
+          <div class="jumbotron"><h2>Your Order</h2></div></div>
+          <div class="card-body" id="myOrder">
+
         </div>
       </div>
+    </div>
     </div>
 
   </body>

@@ -1,5 +1,26 @@
 body{
-  background-image:url('../images/pizza4.webp'); 
+  background-image:url('../images/pizza4.webp');
   color: #14606C;
 
+}
+.container{
+  padding-bottom: 30px;
+}
+#menu{
+  background-image: url(../images/pizza1.webp);
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #000000;
+}
+#prices{
+  background-image: url(../images/pizza1.webp);
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #000000;
+}
+#myOrder{
+  background-image: url(../images/pizza1.webp);
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #000000;
 }
