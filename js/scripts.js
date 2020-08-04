@@ -27,29 +27,28 @@ $(document).ready(function() {
        var deliveryCheck=$("#deliveryCheck").val();
 
       var myOrder=new order(pizzaType, pizzaSize, pizzaCrust, pizzaToppings, pizzaNumber, deliveryCheck);
-  $("#myOrder").append(myOrder.pizzaType + " " + myOrder.pizzaSize + " " + myOrder.pizzaCrust + " " + myOrder.pizzaToppings + " " + myOrder.pizzaNumber + " " + myOrder.deliveryCheck);
+  $("#one").append( myOrder.pizzaType + " " + myOrder.pizzaSize + " " + myOrder.pizzaCrust + " " + myOrder.pizzaToppings + " " + "*" + myOrder.pizzaNumber + " " + myOrder.deliveryCheck );
 
 
-        if (pizzaSize="large" && deliveryCheck==true){
+        if (pizzaSize=="Large" && deliveryCheck==true){
             var price=(pizzaSizeLarge*pizzaNumber)+delivery;
           }
-        else if (pizzaSize="large" && deliveryCheck==false){
+        else if (pizzaSize=="Large" && deliveryCheck==false){
           var price=(pizzaSizeLarge*pizzaNumber);
         }
-        if (pizzaSize="medium" && deliveryCheck==true){
+        if (pizzaSize=="Medium" && deliveryCheck==true){
             var price=(pizzaSizeMedium*pizzaNumber)+delivery;
           }
-        else if (pizzaSize="Medium" && deliveryCheck==false){
+        else if (pizzaSize=="Medium" && deliveryCheck==false){
           var price=(pizzaSizeMedium*pizzaNumber);
         }
-        if (pizzaSize="small" && deliveryCheck==true){
+        if (pizzaSize="Small" && deliveryCheck==true){
             var price=(pizzaSizeSmall*pizzaNumber)+delivery;
           }
-        else if (pizzaSize="small" && deliveryCheck==false){
+        else if (pizzaSize="Small" && deliveryCheck==false){
           var price=(pizzaSizeSmall*pizzaNumber);
         }
 
-        alert(price);
-
+        $("#myOrder").append("Total  :" + "" + price);
 });
 });
